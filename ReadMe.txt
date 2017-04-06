@@ -177,7 +177,9 @@ Connect to a teammate's box that has been shared
 \----------------------------------------------------/
 Version Control: github.com
 php IDE: PhpStorm or Sublime. I use PhpStorm, but both are free to students
-mySql client: mysql Workbench
+mySql client: mysql Workbench :: configuration settings in ~/HelpfulPictures
+	*NOTE PhpStorm also has a mysql client*
+		-View > Tool Windows > Database
 remote collaboration tool: Lync
 Videos and tutorials : 
 	- general stuff :: Lynda.com
