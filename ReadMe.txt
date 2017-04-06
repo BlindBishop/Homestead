@@ -28,12 +28,14 @@ Step 4) Launch git bash and run the command:
 	
 	***from now on 'home directory' will be denoted as ~/
 
+	*Possible error, git bash isn't working. See troubleshooting tip (4)*
+
 Step 5) Launch Vagrant
 	-Go to your home directory ~/
 	-Right click in the Homestead directory > Open git bash
 	-Execute the following command
 --> 	vagrant up
-	*if it does not work please see the troubleshooting tips at the bottom of this guide!*
+	*if it does not work please see troubleshooting tips (1, 2, & 3) at the bottom of this guide!*
 
 Step 6) Connect sites to the ngix engine in your Vagrant instance
 	-For Windows
@@ -62,6 +64,9 @@ Step 6) Connect sites to the ngix engine in your Vagrant instance
 Step 7) Test
 	1) go to chrome
 	2) url = 'Lab4.app'
+	*if this does not work, please see troubleshooting tip (3) below*
+	*and make sure to destroy your current box first*
+	*also, check your hosts file in step 6*
 
 Hurray, you have a working server on your computer!
 
@@ -150,10 +155,11 @@ Connect to a teammate's box that has been shared
 -------------------------------------------------------------------------------------------------
 
 /----------------------------------------------------\
-|	        Troubleshooting Vagrant		     |
+|	          Troubleshooting Tips		     |
 \----------------------------------------------------/
 1) you need to have hardware virtualization (or intel-VTX) enabled in the BIOS of your computer
 	-if you don't know how to enter the bios of your particular computer, google it
+	-next, see troubleshooting tip (3)
 2) you may not have permissions to modify files in your Temp folder (vagrant needs to be able to modify your files)
 	-easy fix:
 		C:\Users\your user name\AppData\Local\Temp
@@ -165,12 +171,19 @@ Connect to a teammate's box that has been shared
 	-go to ~/VagrantTroubleshooting
 	-run vagrant_1.9.1.msi -or- vagrant_1.9.1.dmg (for mac)
 	-click repair
-	-it will ask you to reboot and you will want to reboot.
-4) enviornment variables
+	-it will ask you to reboot. Do this.
+	-when your computer comes back up, run 'vagrant up' in git bash from ~/Homestead
+
+4) manually set up enviornment variables
 	-go to ~/VagrantTroubleshooting
 	-open "System Variables.png" and "User Variables.png"
 	-Make sure your enviornment variables look like mine.
 
+5) host file is overwriting
+	-sometimes when you reboot your computer it will overwrite your hosts file.
+	-see step 6 in the 'Getting Started' section to put the lines back
+
+6) Have you tried turning it off and on again?
 ------------------------------------------------------------------------------------------------
 /----------------------------------------------------\
 |	          Recommended Tools		     |
@@ -181,6 +194,7 @@ mySql client: mysql Workbench :: configuration settings in ~/HelpfulPictures
 	*NOTE PhpStorm also has a mysql client*
 		-View > Tool Windows > Database
 remote collaboration tool: Lync
+Prettier command prompt: conEmu
 Videos and tutorials : 
 	- general stuff :: Lynda.com
 	- modern web dev :: egghead.io
