@@ -1,0 +1,38 @@
+---
+box: laravel/homestead
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: ~/Projects
+      to: /home/vagrant/Projects
+
+sites:
+    - map: Capstone.app
+      to: /home/vagrant/Projects/484Project/views
+
+    - map: Lab4.app
+      to: /home/vagrant/Projects/Lab4
+
+databases:
+    - projectDB
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
