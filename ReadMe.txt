@@ -22,13 +22,19 @@ Step 3) Install Vagrant
 	*it will ask you to reboot. Do this.*
 	
 Step 4) Launch git bash and run the command:
--->	git clone github.com/BlindBishop/Homestead.git
-	*you just downloaded all of the files you will need*
-	*they are all in your home directory :: "C:/users/your user name/"*
+-->	git clone https://github.com/BlindBishop/easyHomestead.git
+		*Possible error :: git clone isn't working. See troubleshooting tip (4)*
+	*you just downloaded all of the files you will need, but they are in the wrong location*
+	*to put them in the right place, go to the following path
+		*windows :: "C:/users/your user name/easyHomestead"*
+		*mac :: ~/easyHomestead*
+		*copy the folders :: 'Projects' '.ssh' and 'Homestead'*
+		*move up 1 directory. Now you will be in 
+			for windows :: "C:/users/your user name/"
+			for mac :: ~/
+		*paste the folders*
 	
-	***from now on 'home directory' will be denoted as ~/
-
-	*Possible error, git bash isn't working. See troubleshooting tip (4)*
+***from now on 'home directory' ("C:/users/your user name/") will be denoted as ~/
 
 Step 5) Launch Vagrant
 	-Go to your home directory ~/
